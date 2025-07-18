@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>AI French Poem Generator</title>
 </head>
 
@@ -14,24 +15,17 @@
     </header>
 
     <main>
-        <form action="">
+        <form action="" id="poem-generator-form">
             <input type="text" id="prompt" placeholder="Enter a theme or topic for your poem" required
                 autocomplete="on" />
-            <button type="submit" id="generate">Generate Poem</button />
+            <button type="submit" id="generate">Generate</button />
         </form>
         <br>
-        <div>
-            Demain, dès l’aube, à l’heure où blanchit la campagne,
-            Je partirai. Vois-tu, je sais que tu m’attends.
-            J’irai par la forêt, j’irai par la montagne.
-            Je ne puis demeurer loin de toi plus longtemps.
-        </div>
+        <div class="poem" id="poem">Ready to create...</div>
     </main>
     <br>
     <footer>This AI project was coded by <a href="http://www.instagram.com/a.alenaf" target="_blank">Aleida Aleña</a>.
-        It is open-sourced in <a href="https://github.com/aaleida/french-poems-generatort" target="_blank">GitHub</a>
-        and
-        hosted on <a href="aigeneratorfrenchpoems.netlify.app" target="_blank">Netlify</a></a></footer>
+        It is open-sourced in <a href="https://github.com/aaleida/french-poems-generatort" target="_blank">GitHub</a> and hosted on <a href="http://aigeneratorfrenchpoems.netlify.app" target="_blank">Netlify</a></a></footer>
     <script src="src/script.js"></script>
 </body>
 
