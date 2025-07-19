@@ -13,7 +13,7 @@ function generatePoem(event) {
     let apiKey = "a9bda932f2ao07463160563ed2640t39";
     let userInput = document.querySelector("#prompt").value;
     let prompt = `Generate a French poem about ${userInput}`;
-    let context = `Generate a French poem based on the theme: ${userInput}. The poem should be short, creative, and capture the essence of the theme.`;
+    let context = `Generate a French poem based on the theme: ${userInput}. The poem should be short (5 sentences long), creative, and capture the essence of the theme.`;
     let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
     axios.get(apiUrl).then(displayPoem);
