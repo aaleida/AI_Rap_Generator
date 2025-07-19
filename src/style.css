@@ -1,30 +1,135 @@
-Body {
-    background-color: #f9f7fe;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: #333;
+/* ========== French Flag Bold Palette ========== */
+:root {
+    --french-blue: #002395;
+    /* Deep vivid blue */
+    --french-red: #ED2939;
+    /* Vivid red */
+    --french-white: #FFFFFF;
+    /* Clean white */
+
+    --accent-blue: #204EFF;
+    /* Brightened version for hover/accents */
+    --accent-red: #FF5C5C;
+    /* Brighter red for hovers or highlights */
+
+    --background-light: #fdfdfd;
+    /* White-ish background */
+    --text-dark: #111111;
+    /* Almost black for strong contrast */
+    --input-gray: #f0f0f0;
+    /* Clean input background */
+}
+
+/* ========== Global Styles ========== */
+body {
     margin: 0;
-    padding: 20px;
-}
-h1 {
+    padding: 0;
+    font-family: playfair display, sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     text-align: center;
-    font-size: 36px;
-    font-weight: 800;
-    color: #272044;
-    line-height: 1.5;
 }
+
+/* ========== Header ========== */
+header {
+    padding: 50px 20px 30px;
+    background: linear-gradient(90deg, #002395 0%, rgba(255, 255, 255, 1) 50%, #ED2939 100%);
+    color: var(--french-white);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: lato, sans-serif;
+    margin: 0;
+    text-shadow: 3px 6px 7px #616161;
+}
+
+/* ========== Main Section ========== */
 main {
-    text-align: center;
-    font-style: italic;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
 }
+
+/* ========== Form ========== */
+form#poem-generator-form {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+input#prompt {
+    padding: 14px 20px;
+    font-size: 1rem;
+    border: 2px solid var(--french-blue);
+    border-radius: 8px;
+    width: 300px;
+    max-width: 80%;
+    background-color: var(--input-gray);
+    color: var(--text-dark);
+}
+
+input#prompt::placeholder {
+    color: #616161;
+        font-family: playfair display, sans-serif;
+}
+
+/* ========== Button ========== */
+button#generate {
+    background-color: var(--french-red);
+    color: var(--french-white);
+    border: none;
+    padding: 14px 24px;
+    font-family: playfair display, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#generate:hover {
+    background-color: var(--accent-red);
+}
+
+/* ========== Poem Display ========== */
+.poem {
+    font-size: 1.3rem;
+    font-style: italic;
+    font-family: lato, serif;
+    color: var(--french-blue);
+    padding: 0 20px;
+    max-width: 700px;
+    line-height: 1.6;
+    border-top: 2px solid var(--french-blue);
+    padding-top: 30px;
+
+}
+
+/* ========== Footer ========== */
 footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #666;
+    padding: 30px 20px;
+    background-color: var(--french-blue);
+    color: var(--french-white);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--french-red);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: var(--accent-red);
+    text-decoration: underline;
 }
